@@ -20,10 +20,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'w0rp/ale'
+Plug 'Valloric/YouCompleteMe'
 
 " Rubby
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
+Plug 'karlhungus/vim-railscasts-theme'
 
 " Python
 Plug 'nvie/vim-flake8', { 'for': 'python' }
