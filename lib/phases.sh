@@ -18,8 +18,8 @@ run_install_phase() {
 }
 
 __install_osx_prerequisites() {
-  local packages="automake fasd gcc gnupg gpg-agent jq pinentry-mac reattach-to-user-namespace sbt the_silver_searcher tmux zsh fortune"
-  packages="${packages} yarn"
+  local packages="automake fasd gcc gnupg gpg-agent jq pinentry-mac reattach-to-user-namespace sbt the_silver_searcher tmux zsh"
+  packages="${packages} yarn fzf fortune"
   apply_delta "install base brew packages" "bin/apply packages ${packages}" || return $?
 }
 
