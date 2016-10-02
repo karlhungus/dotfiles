@@ -19,12 +19,12 @@ run_install_phase() {
 
 __install_osx_prerequisites() {
   local packages="automake fasd gcc gnupg gpg-agent jq pinentry-mac reattach-to-user-namespace sbt the_silver_searcher tmux zsh"
-  packages="${packages} yarn fzf fortune"
+  packages="${packages} yarn fortune fzf tig"
   apply_delta "install base brew packages" "bin/apply packages ${packages}" || return $?
 }
 
 __install_linux_prerequisites() {
-  local packages="autoconf build-essential curl jq silversearcher-ag tmux wget zsh fortune"
+  local packages="autoconf build-essential curl jq silversearcher-ag tmux wget zsh fortune tig"
   apply_delta "install base packages" "bin/apply packages ${packages}" || return $?
 }
 
