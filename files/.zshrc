@@ -27,3 +27,5 @@ if [[ $OSTYPE == linux* ]]; then
 fi
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.yarn/bin:$PATH"
