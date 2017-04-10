@@ -43,6 +43,8 @@ __install_packages() {
     apply_delta "install hub" "bin/apply packages hub" || return $?
     apply_delta "install vim" "bin/apply packages vim" || return $?
     apply_delta "install iterm" "bin/apply iterm" || return $?
+    apply_delta "install java" "bin/apply java" || return $?
+    apply_delta "install keybase" "bin/apply keybase" || return $?
   fi
 }
 
