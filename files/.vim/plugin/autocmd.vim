@@ -5,8 +5,8 @@ augroup default_group
   autocmd BufRead,BufNewFile *.rb,*.rabl,*.json.jbuilder,Capfile,Vagrantfile,Podfile,Fastfile setfiletype ruby
   autocmd BufRead,BufNewFile *.htm.erb setfiletype html.eruby
   autocmd BufRead,BufNewFile *.json.erb setfiletype javascript.eruby
-  autocmd BufRead,BufNewFile *.json,*.ejson,*.ehs,*.es6 setfiletype javascript
   autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+  autocmd BufRead,BufNewFile *.json,*.ejson,*.ehs,*.es6,*.avsc setfiletype javascript
   autocmd BufRead,BufNewFile *.go setfiletype go
 
   " Emmet file types
