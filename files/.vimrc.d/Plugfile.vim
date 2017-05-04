@@ -26,6 +26,7 @@ Plug 'Valloric/YouCompleteMe', { 'on': 'YouCompleteMe', 'do': './install.py --al
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
 Plug 'karlhungus/vim-railscasts-theme'
+Plug 'vim-ruby/vim-ruby'
 
 " Python
 Plug 'nvie/vim-flake8', { 'for': 'python' }
