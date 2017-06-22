@@ -15,13 +15,12 @@ export PATH="${PATH}:${HOME}/.yarn/bin"
 export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
 
 ### OpenSSL Headers should use Brew
-export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
-export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
-export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
+if [ "$(uname)" == "Darwin" ]; then
+  export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
+  export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
+  export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
+fi
 
-### Shopify Things
-export PRY=1
-export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 [ -f "/usr/libexec/java_home" ] && export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export WORKON_HOME=~/.virtualenvs
 
