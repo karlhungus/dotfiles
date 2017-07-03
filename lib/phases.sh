@@ -71,7 +71,7 @@ __install_development_environments() {
 
 __install_source_dependencies() {
   if linux; then
-    apply_delta "fetch fasd" "bin/apply source-repo -r clvv/fasd --sha 90b531a --cmd './make install'" || return $?
+    apply_delta "fetch fasd" "bin/apply source-repo -r clvv/fasd --sha 90b531a --cmd ./make install" || return $?
   fi
   apply_delta "fetch oh-my-zsh" "bin/apply source-repo -r robbyrussell/oh-my-zsh --sha b908fee" || return $?
   apply_delta "plug vim" "bin/apply vim-plug" || return $?
