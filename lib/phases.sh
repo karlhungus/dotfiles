@@ -39,10 +39,12 @@ __install_packages() {
     apply_delta "install git" "bin/apply git -v 2.12.2" || return $?
     apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
     apply_delta "install vim" "bin/apply vim -v 7.4.2149" || return $?
+    apply_delta "install fortune" "bin/apply fortune" || return $?
   else
     apply_delta "install git" "bin/apply packages git" || return $?
     apply_delta "install hub" "bin/apply packages hub" || return $?
     apply_delta "install vim" "bin/apply packages vim" || return $?
+    apply_delta "install fortune" "bin/apply fortune" || return $?
     apply_delta "install iterm" "bin/apply iterm" || return $?
     apply_delta "install java" "bin/apply java" || return $?
     apply_delta "install keybase" "bin/apply keybase" || return $?

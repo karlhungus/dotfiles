@@ -38,17 +38,4 @@ apply() {
   if osx; then
     cp -a lib/fonts/. ${HOME}/Library/Fonts/
   fi
-
-  if osx; then
-    pushd lib/fortune/fortune-mod-smac-0.1-osx/
-    make install
-    popd
-  fi
-
-  if linux; then
-    pushd lib/fortune/fortune-mod-smac-0.1/
-    make install
-    popd
-  fi
-  success "Installed fortune"
 }
