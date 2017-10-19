@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/izaak/code/interview_questions/.circleci'
+let g:netrw_dirhist_2='/home/izaak/code/http_log_monitor/test/http_log_monitor'
+let g:netrw_dirhist_3='/home/izaak/code/interview_questions/go/src/brace_matcher'
+let g:netrw_dirhist_4='/home/izaak/dotfiles/files/.vim'
+let g:netrw_dirhist_5='/home/izaak/dotfiles/files/.vim/plugin'
+let g:netrw_dirhist_6='/home/izaak/code/interview_questions/go/src/github.com/karlhungus/magic_squares'
+let g:netrw_dirhist_7='/home/izaak/code/go-tour/src/slice_pic'
+let g:netrw_dirhist_8='/home/izaak/code/edx_kubernetes/vol'

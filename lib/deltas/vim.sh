@@ -33,7 +33,7 @@ apply() {
     --enable-pythoninterp \
     --enable-python3interp || return $?
 
-  make && make install
+  make && sudo make install
   popd >/dev/null
 
   rm -rf /tmp/vim-${version}

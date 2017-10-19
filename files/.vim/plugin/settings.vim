@@ -66,9 +66,6 @@ let g:ruby_indent_assignment_style = 'variable'
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_show_diagnostics_ui = 1
-" let g:ycm_always_populate_location_list = 1
-" let g:ycm_seed_identifiers_with_syntax = 1
-" let g:ycm_server_log_level = "debug"
 let g:ycm_enable_diagnostic_highlighting = 1
 
 " Integrate YouCompleteMe with vim-multiple-cursors, otherwise

@@ -38,8 +38,8 @@ __install_packages() {
   if linux; then
     apply_delta "install git" "bin/apply git -v 2.12.2" || return $?
     apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
-    apply_delta "install vim" "bin/apply vim -v 7.4.2149" || return $?
-    apply_delta "install fortune" "bin/apply fortune" || return $?
+    apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
+    apply_delta "install fortune-mod-smac" "bin/apply fortune-mod-smac" || return $?
   else
     apply_delta "install git" "bin/apply packages git" || return $?
     apply_delta "install hub" "bin/apply packages hub" || return $?
@@ -59,8 +59,7 @@ __install_development_environments() {
   # For now, I'm going to let dev handle rubies
   if ! osx; then
     apply_delta "install ruby-install" "bin/apply ruby-install -v 0.6.0" || return $?
-    apply_delta "install ruby 2.3.1" "bin/apply ruby -v 2.3.1 ${system_ruby}" || return $?
-    apply_delta "install ruby 2.2.5" "bin/apply ruby -v 2.2.5" || return $?
+    apply_delta "install ruby 2.4.1" "bin/apply ruby -v 2.4.1 ${system_ruby}" || return $?
     apply_delta "install chruby" "bin/apply chruby -v 0.3.9" || return $?
   fi
 
@@ -76,7 +75,7 @@ __install_source_dependencies() {
   if linux; then
     apply_delta "fetch fasd" "bin/apply source-repo -r clvv/fasd --sha 90b531a --cmd ./make install" || return $?
   fi
-  apply_delta "fetch oh-my-zsh" "bin/apply source-repo -r robbyrussell/oh-my-zsh --sha b908fee" || return $?
+  apply_delta "fetch oh-my-zsh" "bin/apply source-repo -r robbyrussell/oh-my-zsh --sha b908feeb" || return $?
   apply_delta "plug vim" "bin/apply vim-plug" || return $?
   apply_delta "install powerline fonts" "bin/apply source-repo --repo powerline/fonts --sha a83a867 --cmd ./install.sh" || return $?
 }
