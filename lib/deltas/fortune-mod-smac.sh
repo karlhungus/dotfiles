@@ -2,7 +2,7 @@
 set -euo pipefail
 
 applied() {
-  local TEST=$(fortune smac -m PYRRHO) > /dev/null
+  local TEST=$(/usr/games/fortune smac -m PYRRHO) > /dev/null
   [[ $TEST =~ "TERMINATION" ]]
 }
 

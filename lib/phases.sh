@@ -39,6 +39,7 @@ __install_packages() {
     apply_delta "install git" "bin/apply git -v 2.12.2" || return $?
     apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
     apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
+    apply_delta "install fasd" "bin/apply fasd -v 1.0.1" || return $?
     apply_delta "install fortune-mod-smac" "bin/apply fortune-mod-smac" || return $?
   else
     apply_delta "install git" "bin/apply packages git" || return $?
@@ -72,9 +73,6 @@ __install_development_environments() {
 }
 
 __install_source_dependencies() {
-  if linux; then
-    apply_delta "fetch fasd" "bin/apply source-repo -r clvv/fasd --sha 90b531a --cmd ./make install" || return $?
-  fi
   apply_delta "fetch oh-my-zsh" "bin/apply source-repo -r robbyrussell/oh-my-zsh --sha b908feeb" || return $?
   apply_delta "plug vim" "bin/apply vim-plug" || return $?
   apply_delta "install powerline fonts" "bin/apply source-repo --repo powerline/fonts --sha a83a867 --cmd ./install.sh" || return $?
