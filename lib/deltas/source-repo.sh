@@ -24,13 +24,13 @@ applied() {
 
 apply() {
   if [ ! -d "${target_dir}" ]; then
-    mkdir -p "${target_dir}"
-    git clone "https://github.com/${repo}" "${target_dir}"
+    sudo mkdir -p "${target_dir}"
+    sudo git clone "https://github.com/${repo}" "${target_dir}"
   fi
 
   pushd "${target_dir}" >/dev/null
-  git fetch --all -p
-  git checkout "${sha}"
+  sudo git fetch --all -p
+  sudo git checkout "${sha}"
   if [ -n "${cmd}" ]; then eval "${cmd}"; fi
   popd >/dev/null
 }
