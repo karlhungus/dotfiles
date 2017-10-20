@@ -16,6 +16,7 @@ apply() {
   local package_name="go${version}.${os_type}-amd64.tar.gz"
 
   download_file "https://storage.googleapis.com/golang/${package_name}" /tmp || return $?
-  extract_archive "/tmp/${package_name}" "/usr/local" || return $?
-  rm "/tmp/${package_name}"
+  extract_archive "/tmp/${package_name}" "/usr/local" "sudo"|| return $?
+  sudo ln -s /usr/local/go/bin/go /usr/bin/go
+  sudo rm "/tmp/${package_name}"
 }

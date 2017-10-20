@@ -26,7 +26,7 @@ apply() {
   make configure || return $?
   ./configure --prefix=/usr/local || return $?
   make all || return $?
-  make install || return $?
+  sudo make install || return $?
   popd >/dev/null
 
   rm -rf /tmp/v${version}.tar.gz /tmp/git-${version}

@@ -16,8 +16,8 @@ apply() {
   extract_archive "/tmp/v${version}.tar.gz" || return $?
 
   pushd /tmp/hub-${version} >/dev/null
-  ./script/build -o /usr/local/bin/hub
+  sudo ./script/build -o /usr/local/bin/hub
   popd >/dev/null
 
-  rm -rf /tmp/v${version}.tar.gz /tmp/hub-${version} /tmp/go*
+  sudo rm -rf /tmp/v${version}.tar.gz /tmp/hub-${version} /tmp/go*
 }
