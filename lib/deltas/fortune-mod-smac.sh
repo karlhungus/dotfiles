@@ -2,8 +2,7 @@
 set -euo pipefail
 
 applied() {
-  local TEST=$(/usr/games/fortune smac -m PYRRHO) > /dev/null
-  [[ $TEST =~ "TERMINATION" ]]
+  [[ "$(which fortune && fortune smac -version)" =~ "fortune-mod version" ]]
 }
 
 apply() {
