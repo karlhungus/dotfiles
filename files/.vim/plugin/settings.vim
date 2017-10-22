@@ -18,12 +18,22 @@ function! s:bufopen(e)
   execute 'buffer' matchstr(a:e, '^[ 0-9]*')
 endfunction
 
+" search buffers
 nnoremap <silent> <Leader>b :call fzf#run({
       \   'source':  reverse(<sid>buflist()),
       \   'sink':    function('<sid>bufopen'),
       \   'options': '+m',
       \   'down':    len(<sid>buflist()) + 2
       \ })<CR>
+
+" search in files
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+nnoremap <C-p>a :Rg
 
 " NERDTree
 let g:NERDSpaceDelims=1
@@ -77,6 +87,11 @@ let g:html_indent_tags = 'li\|p\|header\|footer\|section\|aside\|nav'
 " use ag if available
 if executable("ag")
   let g:ackprg = "ag --nogroup --column"
+endif
+
+" use rg if available
+if executable("rg")
+  let g:ackprg = "rg --vimgrep --no-heading"
 endif
 
 " scala

@@ -19,7 +19,7 @@ run_install_phase() {
 
 __install_osx_prerequisites() {
   local packages="automake fasd gcc gnupg gpg-agent jq pinentry-mac reattach-to-user-namespace sbt the_silver_searcher tmux zsh"
-  packages="${packages} yarn fortune fzf tig"
+  packages="${packages} yarn fortune fzf tig ripgrep"
   apply_delta "install base brew packages" "bin/apply packages ${packages}" || return $?
 }
 
@@ -36,6 +36,7 @@ __install_prerequisites() {
 
 __install_packages() {
   if linux; then
+    apply_delta "install ripgrep" "bin/apply ripgrep -v 0.7.0" || return $?
     apply_delta "install git" "bin/apply git -v 2.12.2" || return $?
     apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
     apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
