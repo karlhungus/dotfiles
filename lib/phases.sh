@@ -25,7 +25,7 @@ __install_osx_prerequisites() {
 
 __install_linux_prerequisites() {
   local packages="autoconf build-essential curl jq silversearcher-ag tmux wget zsh fortunes-min tig"
-  packages="${packages} pcregrep"
+  packages="${packages} pcregrep fonts-firacode"
   apply_delta "install base packages" "bin/apply packages ${packages}" || return $?
 }
 
