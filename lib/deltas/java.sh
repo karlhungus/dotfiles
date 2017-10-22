@@ -2,12 +2,13 @@
 set -euo pipefail
 
 applied() {
-  # not a failure, but nothing to do for linux
-  if linux; then return 0; fi
-
-  [[ -d /Applications/iTerm.app ]]
+  [[ $(which java && java -version) =~ "java" ]]
 }
 
 apply() {
-  brew cask install java
+  if osx; then
+    brew cask install java
+  elif linux; then
+    sudo apt-get install -y default-jre
+  fi
 }

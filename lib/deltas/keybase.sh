@@ -2,12 +2,20 @@
 set -euo pipefail
 
 applied() {
-  # not a failure, but nothing to do for linux
-  if linux; then return 0; fi
-
-  [[ -d /Applications/iTerm.app ]]
+  [[ "$(which keybase && keybase --version)" =~ "keybase" ]]
 }
 
 apply() {
-  brew cask install keybase
+  if osx; then
+    brew cask install keybase
+  elif linux; then
+    download_file https://prerelease.keybase.io/keybase_amd64.deb /tmp
+    # if you see an error about missing `libappindicator1`
+    # # from the next command, you can ignore it, as the
+    # # subsequent command corrects it
+    sudo dpkg -i /tmp/keybase_amd64.deb
+    sudo apt-get install -f
+    run_keybase
+    rm -rf /tmp/keybase_amd64.deb
+  fi
 }
