@@ -2,6 +2,7 @@
 set -euo pipefail
 
 applied() {
+  PATH=$PATH:/usr/games
   [[ "$(which fortune && fortune smac -version)" =~ "fortune-mod version" ]]
 }
 
