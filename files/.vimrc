@@ -9,7 +9,7 @@ source $HOME/.vimrc.d/Plugfile.vim
 filetype plugin indent on " load file type plugins + indentation
 syntax enable
 
-colorscheme solarized
+silent! colorscheme solarized
 
 set mouse=a
 set visualbell      " disable audible bell
