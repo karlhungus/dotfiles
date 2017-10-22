@@ -61,7 +61,7 @@ __install_development_environments() {
   # For now, I'm going to let dev handle rubies
   if ! osx; then
     apply_delta "install ruby-install" "bin/apply ruby-install -v 0.6.0" || return $?
-    apply_delta "install ruby 2.4.1" "bin/apply ruby -v 2.4.1 ${system_ruby}" || return $?
+    apply_delta "install ruby 2.4.2" "bin/apply ruby -v 2.4.2 ${system_ruby}" || return $?
     apply_delta "install chruby" "bin/apply chruby -v 0.3.9" || return $?
   fi
 
