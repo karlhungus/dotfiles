@@ -6,8 +6,10 @@ files/bin/*
 !files/bin/git-thaw
 !files/bin/install_ruby
 
-files/.gnupg/*
-!files/.gnupg/gpg.conf
-!files/.gnupg/gpg-agent.conf
+lib/gnupg/*
+!lib/gnupg/osx/gpg.conf
+!lib/.gnupg/osx/gpg-agent.conf
+!lib/gnupg/linux/gpg.conf
+!lib/gnupg/linux/gpg-agent.conf
 
 files/.vim/bundle/

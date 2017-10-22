@@ -24,6 +24,9 @@ applied() {
     fi
   done
 
+  if [ ! -d "${HOME}/.gnupg" ]; then
+    return -1
+  fi
 
   echo "links: ${#missing_links[@]}"
   return ${#missing_links[@]}
@@ -37,5 +40,14 @@ apply() {
 
   if osx; then
     cp -a lib/fonts/. ${HOME}/Library/Fonts/
+  fi
+
+  if osx; then
+    ln -sf "$(real_path lib/gnupg/osx)" "${target}/.gnupg" || return $?
+    success "linked $(real_path lib/gnupg/osx) to ${target}/.gnupg"
+  fi
+  if linux; then
+    ln -sf "$(real_path lib/gnupg/linux)" "${target}/.gnupg" || return $?
+    success "linked $(real_path lib/gnupg/linux) to ${target}/.gnupg"
   fi
 }
