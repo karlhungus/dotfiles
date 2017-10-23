@@ -16,6 +16,8 @@ apply() {
   extract_archive "/tmp/v${version}.tar.gz" || return $?
 
   pushd /tmp/ruby-install-${version} >/dev/null
+  # prevent sudo from making a ~/.cache/ruby-install/ruby dir
+  mkdir -p ~/.cache/ruby-install/ruby
   sudo make install
   popd >/dev/null
 
