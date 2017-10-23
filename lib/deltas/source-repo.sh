@@ -29,7 +29,7 @@ applied() {
 apply() {
   local prefix=""
 
-  if [ -d ${target_root} && ! -w $target_root ]; then prefix="sudo "; fi
+  if [[ -d ${target_root} && ! -w $target_root ]]; then prefix="sudo "; fi
   if [ ! -d "${target_dir}" ]; then
     $prefix mkdir -p "${target_dir}"
     $prefix git clone "https://github.com/${repo}" "${target_dir}"
