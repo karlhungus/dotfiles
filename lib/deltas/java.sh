@@ -2,6 +2,8 @@
 set -euo pipefail
 
 applied() {
+  # you need java to install java... fuuuuu oracle
+  if osx; then return 0; fi
   [[ $(which java && java -version) =~ "java" ]]
 }
 
