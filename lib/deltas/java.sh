@@ -2,7 +2,8 @@
 set -euo pipefail
 
 applied() {
-  [[ $(which java && java -version) =~ "java" ]]
+  # this version test is the only thing common across openjdk and oracle java
+  [[ $(which java && java -version 2>&1) =~ "version" ]]
 }
 
 apply() {
