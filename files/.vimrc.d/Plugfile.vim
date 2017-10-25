@@ -57,4 +57,6 @@ Plug 'keith/swift.vim', { 'for': 'swift' }
 " Scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
+" PHP
+Plug 'stanangeloff/php.vim', { 'for': 'php' }
 call plug#end()

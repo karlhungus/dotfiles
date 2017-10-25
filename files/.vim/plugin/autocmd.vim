@@ -8,6 +8,7 @@ augroup default_group
   autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
   autocmd BufRead,BufNewFile *.json,*.ejson,*.ehs,*.es6,*.avsc setfiletype javascript
   autocmd BufRead,BufNewFile *.go setfiletype go
+  autocmd BufRead,BufNewFile *.php setfiletype php
 
   " Emmet file types
   autocmd FileType html,html.eruby,css,haml,eruby,handlebars,liquid,javascript,markdown EmmetInstall
