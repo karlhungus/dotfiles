@@ -51,6 +51,7 @@ __install_packages() {
   fi
   apply_delta "install java" "bin/apply java" || return $?
   apply_delta "install keybase" "bin/apply keybase" || return $?
+  # apply_delta "install php" "bin/apply php" || return $?
 }
 
 __install_development_environments() {
