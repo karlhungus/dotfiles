@@ -69,7 +69,7 @@ __install_development_environments() {
   if osx; then packages="python python3"; fi
   apply_delta "install python" "bin/apply packages ${packages}"
 
-  apply_delta "install golang" "bin/apply golang -v 1.9.1" || return $?
+  apply_delta "install golang" "bin/apply golang -v 1.9.2" || return $?
   apply_delta "install google cloud sdk" "bin/apply gcloud"
 }
 
