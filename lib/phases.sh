@@ -37,7 +37,7 @@ __install_prerequisites() {
 __install_packages() {
   if linux; then
     apply_delta "install ripgrep" "bin/apply ripgrep -v 0.7.0" || return $?
-    apply_delta "install git" "bin/apply git -v 2.12.2" || return $?
+    apply_delta "install git" "bin/apply git -v 2.14.2" || return $?
     apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
     apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
     apply_delta "install fasd" "bin/apply fasd -v 1.0.1" || return $?
@@ -60,7 +60,7 @@ __install_development_environments() {
 
   # For now, I'm going to let dev handle rubies
   if ! osx; then
-    apply_delta "install ruby-install" "bin/apply ruby-install -v 0.6.0" || return $?
+    apply_delta "install ruby-install" "bin/apply ruby-install -v 0.6.1" || return $?
     apply_delta "install ruby 2.4.2" "bin/apply ruby -v 2.4.2 ${system_ruby}" || return $?
     apply_delta "install chruby" "bin/apply chruby -v 0.3.9" || return $?
   fi
@@ -78,4 +78,3 @@ __install_source_dependencies() {
   apply_delta "plug vim" "bin/apply vim-plug" || return $?
   apply_delta "install powerline fonts" "bin/apply source-repo --repo powerline/fonts --sha a83a867 --cmd ./install.sh" || return $?
 }
-
