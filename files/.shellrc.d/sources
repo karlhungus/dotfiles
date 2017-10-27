@@ -7,7 +7,9 @@ if [ -f /usr/local/share/chruby/chruby.sh ]; then
   source /usr/local/share/chruby/auto.sh
 fi
 
-gpgconf --launch gpg-agent
+GPG_TTY=$(tty)
+export GPG_TTY
+gpg-connect-agent updatestartuptty /bye
 
 if [ -f ~/.fzf.bash ]; then
   if [ -n "${ZSH_VERSION}" ]; then
