@@ -41,16 +41,15 @@ __install_packages() {
     apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
     apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
     apply_delta "install fasd" "bin/apply fasd -v 1.0.1" || return $?
-    apply_delta "install fortune-mod-smac" "bin/apply fortune-mod-smac" || return $?
   else
     apply_delta "install git" "bin/apply packages git" || return $?
     apply_delta "install hub" "bin/apply packages hub" || return $?
     apply_delta "install vim" "bin/apply packages vim" || return $?
-    apply_delta "install fortune-mod-smac" "bin/apply fortune-mod-smac" || return $?
     apply_delta "install iterm" "bin/apply iterm" || return $?
   fi
   apply_delta "install java" "bin/apply java" || return $?
   apply_delta "install keybase" "bin/apply keybase" || return $?
+  apply_delta "install fortune-mod-smac" "bin/apply fortune-mod-smac" || return $?
   # apply_delta "install php" "bin/apply php" || return $?
 }
 
