@@ -17,8 +17,13 @@ apply() {
 
   download_file "https://storage.googleapis.com/golang/${package_name}" /tmp || return $?
   extract_archive "/tmp/${package_name}" "/usr/local" "sudo"|| return $?
-  sudo ln -sf /usr/local/go/bin/go /usr/bin/go
-  sudo ln -sf /usr/local/go/bin/gofmt /usr/bin/gofmt
+  if linux; then
+    sudo ln -sf /usr/local/go/bin/go /usr/bin/go
+    sudo ln -sf /usr/local/go/bin/gofmt /usr/bin/gofmt
+  elif osx; then
+    sudo ln -sf /usr/local/go/bin/go /usr/local/bin/go
+    sudo ln -sf /usr/local/go/bin/gofmt /usr/local/bin/gofmt
+  fi
   go get -u github.com/golang/lint/golint
   sudo rm "/tmp/${package_name}"
 }
