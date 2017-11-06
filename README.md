@@ -28,7 +28,7 @@ Delta scripts can also define options and validate them (see _lib/deltas/ruby.sh
 
 You can always, just clone the repo and run `bin/setup`.
 
-You can also `eval "$(curl -fsSL https://raw.github.com/pseudomuto/dotfiles/master/bootstrap.sh)"` on a fresh machine.
+You can also `eval "$(curl -fsSL https://raw.github.com/karlhungus/dotfiles/master/bootstrap.sh)"` on a fresh machine.
 This will download (not clone, git might not be installed yet) this repo to `~/dotfiles` and run `bin/setup` (just
 dotfiles...in case it's a shared system or something)
 
