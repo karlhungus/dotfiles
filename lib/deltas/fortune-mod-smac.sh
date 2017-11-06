@@ -4,7 +4,7 @@ set -euo pipefail
 applied() {
   PATH=$PATH:/usr/games
   if osx; then
-    if [["$(which fortune && fortune smac &&fortune -version 2>&1)" =~ "fortune-mod version" ]]; then
+    if [["$(which fortune && fortune smac 2>&1)" =~ "fortune-mod version" ]]; then
       return 0
     fi
   fi
