@@ -23,4 +23,4 @@ fi
 export WORKON_HOME=~/.virtualenvs
 
 ### Salesforce
-export HEROKU_ORGANIZATION="sfdc-aloha"
+source $GOPATH/src/git.dev.pardot.com/Pardot/infrastructure/bread/etc/shrc
