@@ -23,4 +23,9 @@ fi
 export WORKON_HOME=~/.virtualenvs
 
 ### Salesforce
-source $GOPATH/src/git.dev.pardot.com/Pardot/infrastructure/bread/etc/shrc
+local bread_vars=$GOPATH/src/git.dev.pardot.com/Pardot/infrastructure/bread/etc/shrc
+if [ -f $bread_vars ]; then
+  source $bread_vars
+else
+  echo "Could not find Salesforce vars at: $bread_vars"
+fi
