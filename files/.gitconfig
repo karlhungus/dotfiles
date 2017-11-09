@@ -3,8 +3,8 @@
   excludesfile = ~/.gitignore
 [user]
   name  = Izaak Alpert (karlhungus)
-  email = ialpert@gmail.com
-  signingkey = 0910C7D50D681B42
+	email = ialpert@salesforce.com
+  signingkey = 02C0625B8103869A
 [alias]
   co = checkout
   ci = commit
@@ -20,3 +20,9 @@
   conflictstyle = diff3
 [commit]
   gpgsign = true
+[branch]
+  autosetuprebase = always
+[branch "master"]
+  rebase = true
+[rebase]
+  autoStash = true
