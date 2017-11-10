@@ -1,0 +1,46 @@
+#compdef opsctl
+
+_arguments \
+  '1: :->level1' \
+  '2: :->level2' \
+  '3: :_files'
+case $state in
+  level1)
+    case $words[1] in
+      opsctl)
+        _arguments '1: :(chef completion deploy etcd example gus help iptables)'
+      ;;
+      *)
+        _arguments '*: :_files'
+      ;;
+    esac
+  ;;
+  level2)
+    case $words[2] in
+      etcd)
+        _arguments '2: :(controller disaster-recovery list-backups restore-failed-member)'
+      ;;
+      example)
+        _arguments '2: :(disable-chef)'
+      ;;
+      gus)
+        _arguments '2: :(never-stale-tickets)'
+      ;;
+      iptables)
+        _arguments '2: :(controller)'
+      ;;
+      chef)
+        _arguments '2: :(bootstrap-instance upload-bootstrap-files)'
+      ;;
+      deploy)
+        _arguments '2: :(heroku-controller kubernetes-controller)'
+      ;;
+      *)
+        _arguments '*: :_files'
+      ;;
+    esac
+  ;;
+  *)
+    _arguments '*: :_files'
+  ;;
+esac
