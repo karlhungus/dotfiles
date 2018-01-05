@@ -50,6 +50,13 @@ let g:airline_theme                        = "badwolf"
 let g:ale_lint_on_enter            = 0 " don't lint when opening a file
 let g:ale_fix_on_save              = 1 " lint/correct on save
 let g:ale_sign_column_always       = 1 " keep the column open all the time
+let g:ale_lint_on_text_change      = 1 " lint on update
+" let g:ale_linters = {
+"      \  'go': ['gofmt', 'goimports', 'go vet', 'golint', 'gometalinter', 'go build', 'gosimple', 'staticcheck'],
+"      \ }
+
+" vim-go
+let g:go_fmt_command = "goimports"
 
 " rust auto-format on save
 let g:rustfmt_autosave = 1

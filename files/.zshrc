@@ -2,12 +2,12 @@
 ZSH="${HOME}/.oh-my-zsh"
 ZSH_THEME="crunch"
 plugins=(history-substring-search fasd git osx ruby bundler brew go kubectl)
-
 source $ZSH/oh-my-zsh.sh
 
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
+source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 # Allow [ or ] wherever you want
 unsetopt nomatch

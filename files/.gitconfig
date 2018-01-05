@@ -20,3 +20,11 @@
   conflictstyle = diff3
 [commit]
   gpgsign = true
+[branch]
+  autosetuprebase = always
+[branch "master"]
+  rebase = true
+[rebase]
+  autoStash = true
+[url "git@github.com:"]
+  insteadOf = "https://github.com/"

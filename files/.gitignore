@@ -18,3 +18,6 @@ tags
 .bundle
 vendor/bin
 vendor/bundle
+
+**/vendor/bin
+**/vendor/bundle
