@@ -22,11 +22,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe', { 'on': 'YouCompleteMe', 'do': './install.py --all' }
+Plug 'editorconfig/editorconfig-vim'
 
 " Rubby
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
-Plug 'karlhungus/vim-railscasts-theme'
+" Plug 'karlhungus/vim-railscasts-theme'
 Plug 'vim-ruby/vim-ruby'
 
 " Python
