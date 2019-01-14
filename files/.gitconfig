@@ -34,3 +34,4 @@
   host = https://git.dev.pardot.com
 [fetch]
   prune = true
+	branch = false
