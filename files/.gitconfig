@@ -29,4 +29,8 @@
 [url "git@github.com:"]
   insteadOf = "https://github.com/"
 [pager]
-	branch = false
+  branch = false
+[hub]
+  host = https://git.dev.pardot.com
+[fetch]
+  prune = true
