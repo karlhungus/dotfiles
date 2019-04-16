@@ -58,3 +58,7 @@ set wildignore+=*/.git/*,*/.svn/*,*/log/*,*/vendor/*
 
 set autoread
 set laststatus=2
+
+"" Spell Check
+set spell spelllang=en
+"set spellfile=$HOME/.vim/spell/en.utf-8.add

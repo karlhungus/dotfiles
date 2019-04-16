@@ -4,3 +4,4 @@ let g:netrw_dirhist_1='/home/izaak/dotfiles/lib/util'
 let g:netrw_dirhist_2='/home/izaak/code/php_is_fine/project/config/doctrine'
 let g:netrw_dirhist_3='/Users/ialpert/dotfiles/files/.zshrc.d'
 let g:netrw_dirhist_4='/Users/ialpert/dotfiles/files/.zshrc.d/completion'
+let g:netrw_dirhist_cnt =0
