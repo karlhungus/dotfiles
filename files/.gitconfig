@@ -28,6 +28,8 @@
   autoStash = true
 [url "git@github.com:"]
   insteadOf = "https://github.com/"
+[url "git@git.dev.pardot.com:"]
+  insteadOf = "https://git.dev.pardot.com/"
 [pager]
   branch = false
 [hub]
