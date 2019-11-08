@@ -13,3 +13,4 @@ lib/gnupg/*
 !lib/gnupg/linux/gpg-agent.conf
 
 files/.vim/bundle/
+files/.aws/*

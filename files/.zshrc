@@ -32,3 +32,7 @@ fi
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/ialpert/bin/vault vault

@@ -43,7 +43,9 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.eruby'] }
 Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 
 " Go
-Plug 'fatih/vim-go', { 'for': 'go' }
+"Plug 'fatih/vim-go', { 'for': 'go' }
+"Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ekalinin/Dockerfile.vim'
 
 " HTML/Markdown
