@@ -21,3 +21,8 @@ fi
 
 [ -f "/usr/libexec/java_home" ] && export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export WORKON_HOME=~/.virtualenvs
+
+export AWS_VAULT_KEYCHAIN_NAME=login
+
+### Gpg shit
+export GPG_TTY=$(tty)
