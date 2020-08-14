@@ -10,8 +10,8 @@ Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'dir': '~/.vim/bundle/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+" Plug 'scrooloose/nerdcommenter'
 Plug 'roman/golden-ratio'
 Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 Plug 'tpope/vim-surround'
@@ -27,20 +27,20 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Rubby
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
+" Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
 " Plug 'karlhungus/vim-railscasts-theme'
 Plug 'vim-ruby/vim-ruby'
 
 " Python
-Plug 'nvie/vim-flake8', { 'for': 'python' }
+" Plug 'nvie/vim-flake8', { 'for': 'python' }
 
 " Closure
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Javascript
-Plug 'kchmck/vim-coffee-script', { 'for': ['coffee', 'coffeescript' ] }
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.eruby'] }
-Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+" Plug 'kchmck/vim-coffee-script', { 'for': ['coffee', 'coffeescript' ] }
+" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.eruby'] }
+" Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 
 " Go
 "Plug 'fatih/vim-go', { 'for': 'go' }
@@ -58,9 +58,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " Swift
 Plug 'keith/swift.vim', { 'for': 'swift' }
 
-" Scala
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+" hashicorp configuration language (terraform etc)
+Plug 'hashivim/vim-terraform'
 
-" PHP
-Plug 'stanangeloff/php.vim', { 'for': 'php' }
 call plug#end()
