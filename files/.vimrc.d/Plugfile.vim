@@ -52,12 +52,6 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 "Plug 'mattn/emmet-vim'
 
-" Rust
-"Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-
-" Swift
-"Plug 'keith/swift.vim', { 'for': 'swift' }
-
 " hashicorp configuration language (terraform etc)
 Plug 'hashivim/vim-terraform'
 
