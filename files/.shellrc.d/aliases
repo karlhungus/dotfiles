@@ -31,6 +31,8 @@ alias pg-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.
 alias mybranch="git status | grep 'On branch' | sed 's#On branch ##'"
 
 # git branch delete with selector
-alias gbdsel="git branch -d $(git branch | fzf -m)"
+gbdsel () {
+  git branch -d $(git branch | fzf -m)
+}
 # git stash selector to pop
 alias gstsel="git stash list | grep -o '{\d\+}' | sed 's|^{||;s|}$||' | fzf --preview 'git stash show {}' | xargs git stash pop"
