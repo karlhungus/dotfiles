@@ -11,9 +11,6 @@ augroup default_group
   autocmd BufRead,BufNewFile *.php setfiletype php
   autocmd BufRead,BufNewFile *.yaml,*yml setfiletype yaml
 
-  " Emmet file types
-  autocmd FileType html,html.eruby,css,haml,eruby,handlebars,liquid,javascript,markdown EmmetInstall
-
   " File types that require tabs, not spaces
   autocmd FileType make set noexpandtab
 

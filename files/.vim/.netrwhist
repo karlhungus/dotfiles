@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/ialpert/blt/rego-experiments/test_ordering'
+let g:netrw_dirhist_0='/Users/ialpert/blt/infrastructure/storm/manifests/base'
+let g:netrw_dirhist_9='/Users/ialpert/blt/pardot-es-parser/config/kubernetes/local'
+let g:netrw_dirhist_8='/Users/ialpert/blt/infrastructure/kubernetes/cmd/secrets-deploy/config/base'
+let g:netrw_dirhist_7='/Users/ialpert/blt/infrastructure/kubernetes/cmd/kubernetes-deploy/kubernetes/base'
+let g:netrw_dirhist_6='/Users/ialpert/blt/infrastructure/kubernetes/cmd/kubernetes-deploy/kubernetes/tools1'
+let g:netrw_dirhist_5='/Users/ialpert/blt/infrastructure/components/mesh-canary/config/production'
+let g:netrw_dirhist_4='/Users/ialpert/blt/pardot/config/kubernetes/roles/autojob-policy'
+let g:netrw_dirhist_3='/Users/ialpert/blt/identity/Formula'
+let g:netrw_dirhist_2='/Users/ialpert/blt/infrastructure/secrets/appconfig/pardot0-ue1'

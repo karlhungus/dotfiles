@@ -50,10 +50,12 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " HTML/Markdown
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-"Plug 'mattn/emmet-vim'
 
 " hashicorp configuration language (terraform etc)
 Plug 'hashivim/vim-terraform'
+
+" yaml helper
+Plug 'Einenlum/yaml-revealer'
 
 " rego
 Plug 'tsandall/vim-rego'
