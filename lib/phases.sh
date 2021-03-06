@@ -18,13 +18,13 @@ run_install_phase() {
 }
 
 __install_osx_prerequisites() {
-  local packages="automake fasd gcc gnupg gpg-agent jq pinentry-mac reattach-to-user-namespace the_silver_searcher tmux zsh"
-  packages="${packages} yarn fortune fzf tig ripgrep"
+  local packages="automake fasd gcc gnupg gpg-agent jq pinentry-mac reattach-to-user-namespace the_silver_searcher tmux zsh "
+  packages="${packages} fortune fzf tig ripgrep"
   apply_delta "install base brew packages" "bin/apply packages ${packages}" || return $?
 }
 
 __install_linux_prerequisites() {
-  local packages="autoconf build-essential curl jq silversearcher-ag tmux wget zsh fortunes-min tig"
+  local packages="autoconf build-essential curl jq silversearcher-ag tmux wget zsh fortunes-min"
   packages="${packages} pcregrep fonts-firacode exuberant-ctags pinentry-tty"
   apply_delta "install base packages" "bin/apply packages ${packages}" || return $?
 }
@@ -36,41 +36,43 @@ __install_prerequisites() {
 
 __install_packages() {
   if linux; then
-    apply_delta "install ripgrep" "bin/apply ripgrep -v 0.7.0" || return $?
-    apply_delta "install git" "bin/apply git -v 2.14.2" || return $?
-    apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
-    apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
-    apply_delta "install fasd" "bin/apply fasd -v 1.0.1" || return $?
+    apply_delta bin/apply packages "git ripgrep fasd vim tig"
+    #apply_delta "install ripgrep" "bin/apply ripgrep -v 0.7.0" || return $?
+    #apply_delta "install git" "bin/apply git -v 2.14.2" || return $?
+    #apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
+   # apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
+    #apply_delta "install fasd" "bin/apply fasd -v 1.0.1" || return $?
   else
-    apply_delta "install git" "bin/apply packages git" || return $?
-    apply_delta "install hub" "bin/apply packages hub" || return $?
-    apply_delta "install vim" "bin/apply packages vim" || return $?
+    #apply_delta "install git" "bin/apply packages git" || return $?
+#    apply_delta "install hub" "bin/apply packages hub" || return $?
+    #apply_delta "install vim" "bin/apply packages vim" || return $?
     apply_delta "install iterm" "bin/apply iterm" || return $?
   fi
-  apply_delta "install java" "bin/apply java" || return $?
-  apply_delta "install keybase" "bin/apply keybase" || return $?
+  #apply_delta "install java" "bin/apply java" || return $?
+  #apply_delta "install keybase" "bin/apply keybase" || return $?
   apply_delta "install fortune-mod-smac" "bin/apply fortune-mod-smac" || return $?
   # apply_delta "install php" "bin/apply php" || return $?
 }
 
 __install_development_environments() {
   # rubba-dub-dubby
-  local system_ruby="--system"
-  if osx; then system_ruby=""; fi # OSX is touchy about replacing the system ruby...
+  #local system_ruby="--system"
+  #if osx; then system_ruby=""; fi # OSX is touchy about replacing the system ruby...
 
   # For now, I'm going to let dev handle rubies
-  if ! osx; then
-    apply_delta "install ruby-install" "bin/apply ruby-install -v 0.6.1" || return $?
-    apply_delta "install ruby 2.7.1" "bin/apply ruby -v 2.7.1 ${system_ruby}" || return $?
-    apply_delta "install chruby" "bin/apply chruby -v 0.3.9" || return $?
-  fi
+  # if ! osx; then
+  # apply_delta "install ruby-install" "bin/apply ruby-install -v 0.6.1" || return $?
+  # apply_delta "install ruby 2.7.1" "bin/apply ruby -v 2.7.1 ${system_ruby}" || return $?
+  # apply_delta "install chruby" "bin/apply chruby -v 0.3.9" || return $?
+  #fi
 
-  local packages="python-dev python3-dev"
-  if osx; then packages="python python3"; fi
-  apply_delta "install python" "bin/apply packages ${packages}"
+  #local packages="python-dev python3-dev"
+  #if osx; then packages="python python3"; fi
+  #apply_delta "install python" "bin/apply packages ${packages}"
 
-  apply_delta "install golang" "bin/apply golang -v 1.9.2" || return $?
-  apply_delta "install google cloud sdk" "bin/apply gcloud"
+  # apply_delta "install golang" "bin/apply golang -v 1.16.0" || return $?
+  #apply_delta "install google cloud sdk" "bin/apply gcloud"
+  echo "done with dev"
 }
 
 __install_source_dependencies() {

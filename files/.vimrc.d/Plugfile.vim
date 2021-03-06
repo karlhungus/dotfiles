@@ -22,8 +22,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'w0rp/ale'
-Plug 'Valloric/YouCompleteMe', { 'on': 'YouCompleteMe', 'do': './install.py --all' }
+"Plug 'Valloric/YouCompleteMe', { 'on': 'YouCompleteMe', 'do': './install.py --all' }
 Plug 'editorconfig/editorconfig-vim'
+
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Rubby
 Plug 'tpope/vim-rails'
@@ -46,6 +51,7 @@ Plug 'vim-ruby/vim-ruby'
 "Plug 'fatih/vim-go', { 'for': 'go' }
 "Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'prabirshrestha/asyncomplete-gocode.vim'
 Plug 'ekalinin/Dockerfile.vim'
 
 " HTML/Markdown
