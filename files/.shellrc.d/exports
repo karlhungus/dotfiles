@@ -30,3 +30,8 @@ export AWS_VAULT_KEYCHAIN_NAME=login
 
 ### Gpg shit
 export GPG_TTY=$(tty)
+
+export AWS_VAULT_KEYCHAIN_NAME=login
+
+# kubectl krew
+export PATH="${PATH}:${HOME}/.krew/bin"
