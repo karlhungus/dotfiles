@@ -32,8 +32,13 @@ fi
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/ialpert/bin/vault vault
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
