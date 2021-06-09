@@ -51,6 +51,7 @@ Plug 'vim-ruby/vim-ruby'
 "Plug 'fatih/vim-go', { 'for': 'go' }
 "Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sebdah/vim-delve'
 Plug 'prabirshrestha/asyncomplete-gocode.vim'
 Plug 'ekalinin/Dockerfile.vim'
 
@@ -61,7 +62,7 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'hashivim/vim-terraform'
 
 " yaml helper
-Plug 'Einenlum/yaml-revealer'
+"Plug 'Einenlum/yaml-revealer'
 
 " rego
 Plug 'tsandall/vim-rego'
