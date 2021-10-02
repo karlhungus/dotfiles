@@ -66,4 +66,7 @@ Plug 'Einenlum/yaml-revealer'
 " rego
 Plug 'tsandall/vim-rego'
 
+" nginx
+Plug 'chr4/nginx.vim'
+
 call plug#end()
