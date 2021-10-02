@@ -37,15 +37,15 @@ __install_prerequisites() {
 __install_packages() {
   if linux; then
     apply_delta bin/apply packages "git ripgrep fasd vim tig"
-    #apply_delta "install ripgrep" "bin/apply ripgrep -v 0.7.0" || return $?
-    #apply_delta "install git" "bin/apply git -v 2.14.2" || return $?
-    #apply_delta "install hub" "bin/apply hub -v 2.2.9" || return $?
-   # apply_delta "install vim" "bin/apply vim -v 8.0.1205" || return $?
-    #apply_delta "install fasd" "bin/apply fasd -v 1.0.1" || return $?
+    apply_delta "install ripgrep" "bin/apply ripgrep -v 13.0.0" || return $?
+    apply_delta "install git" "bin/apply git -v 2.33.0" || return $?
+    apply_delta "install hub" "bin/apply hub -v 2.14.2" || return $?
+    #apply_delta "install vim" "bin/apply vim -v 8.2" || return $?
+    apply_delta "install fasd" "bin/apply fasd -v 1.0.1" || return $?
   else
-    #apply_delta "install git" "bin/apply packages git" || return $?
-#    apply_delta "install hub" "bin/apply packages hub" || return $?
-    #apply_delta "install vim" "bin/apply packages vim" || return $?
+    apply_delta "install git" "bin/apply packages git" || return $?
+    apply_delta "install hub" "bin/apply packages hub" || return $?
+    apply_delta "install vim" "bin/apply packages vim" || return $?
     apply_delta "install iterm" "bin/apply iterm" || return $?
   fi
   #apply_delta "install java" "bin/apply java" || return $?
@@ -70,13 +70,12 @@ __install_development_environments() {
   #if osx; then packages="python python3"; fi
   #apply_delta "install python" "bin/apply packages ${packages}"
 
-  # apply_delta "install golang" "bin/apply golang -v 1.16.0" || return $?
+  apply_delta "install golang" "bin/apply golang -v 1.17.1" || return $?
   #apply_delta "install google cloud sdk" "bin/apply gcloud"
-  echo "done with dev"
 }
 
 __install_source_dependencies() {
-  apply_delta "fetch oh-my-zsh" "bin/apply source-repo -r robbyrussell/oh-my-zsh --sha b908feeb -t ${HOME}/.oh-my-zsh/" || return $?
+  apply_delta "fetch oh-my-zsh" "bin/apply source-repo -r robbyrussell/oh-my-zsh --sha 3c209b00 -t ${HOME}/.oh-my-zsh/" || return $?
   apply_delta "plug vim" "bin/apply vim-plug" || return $?
-  apply_delta "install powerline fonts" "bin/apply source-repo --repo powerline/fonts --sha a83a867 --cmd ./install.sh" || return $?
+  #apply_delta "install powerline fonts" "bin/apply source-repo --repo powerline/fonts --sha 3c209b00 --cmd ./install.sh" || return $?
 }

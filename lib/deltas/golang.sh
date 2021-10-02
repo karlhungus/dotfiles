@@ -24,6 +24,5 @@ apply() {
     sudo ln -sf /usr/local/go/bin/go /usr/local/bin/go
     sudo ln -sf /usr/local/go/bin/gofmt /usr/local/bin/gofmt
   fi
-  go get -u github.com/golang/lint/golint
   sudo rm "/tmp/${package_name}"
 }
