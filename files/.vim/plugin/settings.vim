@@ -6,34 +6,11 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key     = "<C-X>"
 
 " FZF
-map <leader>t :FZF<CR>
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-" search buffers
-nnoremap <silent> <Leader>b :call fzf#run({
-      \   'source':  reverse(<sid>buflist()),
-      \   'sink':    function('<sid>bufopen'),
-      \   'options': '+m',
-      \   'down':    len(<sid>buflist()) + 2
-      \ })<CR>
-
-" search in files
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
-
-nnoremap <C-p>a :Rg
+map <Leader>t :Files<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>r :Rg<CR>
+nnoremap <silent> <Leader>w :Windows<CR>
+
 
 " NERDTree
 "let g:NERDSpaceDelims=1
