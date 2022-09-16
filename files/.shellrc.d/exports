@@ -23,7 +23,7 @@ export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
 #  export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
 #fi
 
-[ -f "/usr/libexec/java_home" ] && export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+[ -f "/usr/libexec/java_home" ] && export JAVA_HOME=`/usr/libexec/java_home -v 2.8`
 export WORKON_HOME=~/.virtualenvs
 
 export AWS_VAULT_KEYCHAIN_NAME=login
